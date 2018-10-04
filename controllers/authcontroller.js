@@ -8,13 +8,13 @@ exports.signup = function(req, res) {
 
 exports.signin = function(req, res) {
  
-    res.render('signin');
+    res.render('business/signin');
  
 }
 
-exports.dashboard = function(req, res) {
+exports.setevents = function(req, res) {
  
-    res.render('dashboard');
+    res.render('setevents');
  
 }
 

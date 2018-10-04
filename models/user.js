@@ -45,7 +45,23 @@ module.exports = function(sequelize, Sequelize) {
         status: {
             type: Sequelize.ENUM('active', 'inactive'),
             defaultValue: 'active'
-        }
+        },
+
+        business: {
+            type: Sequelize.TEXT
+        },
+
+        city: {
+            type: Sequelize.TEXT
+        },
+
+        state: {
+            type: Sequelize.TEXT
+        },
+
+        zip: {
+            type: Sequelize.TEXT
+        },
  
  
     });
