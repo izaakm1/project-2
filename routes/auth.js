@@ -7,11 +7,11 @@ module.exports = function(app, passport) {
     app.get('/signup', authController.signup);
  
  
-    app.get('/signin', authController.signin);
+    app.get('/bussiness/signin', authController.signin);
  
  
     app.post('/signup', passport.authenticate('local-signup', {
-            successRedirect: '/dashboard',
+            successRedirect: '/setevents',
  
             failureRedirect: '/signup'
         }
@@ -19,17 +19,17 @@ module.exports = function(app, passport) {
     ));
  
  
-    app.get('/dashboard', isLoggedIn, authController.dashboard);
+    app.get('/setevents', isLoggedIn, authController.setevents);
  
  
  
     app.get('/logout', authController.logout);
  
  
-    app.post('/signin', passport.authenticate('local-signin', {
-            successRedirect: '/dashboard',
+    app.post('/business/signin', passport.authenticate('local-signin', {
+            successRedirect: '/setevents',
  
-            failureRedirect: '/signin'
+            failureRedirect: '/business/signin'
         }
  
     ));
