@@ -1,72 +1,63 @@
-
-
-<!--<div id="setpromo">
+<div id="setpromo">
     <div class="container">
         <div class="currentevents">
-            /Displays Current promotions here/
+           <h3> Hello, {{username}}</h3>
 
         </div>
         <hr/>
         <div id="promotionform">
-            <h3>Enter new events and promotions</h3>
+            <h3>Update your events for <b id = "businessName" >{{businessName}}</b></h3>
             <br>
             <h5>New entries on the same day will over write the existing promo</h5>
             <br>
             <form>
                 <div class="form-group col-md-8">
                     <label for="promoMonday">Monday</label>
+                    <div>{{currentMondayDeals}}</div>
                     <input type="promotion" class="form-control" id="promoMonday" placeholder="for Monday">
                 </div>
 
                 <div class="form-group col-md-8">
                     <label for="promoTuesday">Tuesday</label>
+                    <div>{{currentTuesdayDeals}}</div>
                     <input type="promotion" class="form-control" id="promoTuesday" placeholder="for Tuesday">
                 </div>
 
                 <div class="form-group col-md-8">
                     <label for="promoWednesday">Wednesday</label>
+                    <div>{{currentWednesdayDeals}}</div>
                     <input type="promotion" class="form-control" id="promoWednesday" placeholder="for Wednesday">
                 </div>
 
                 <div class="form-group col-md-8">
                     <label for="promoTuesday">Thursday</label>
+                    <div>{{currentThursdayDeals}}</div>
                     <input type="promotion" class="form-control" id="promoThursday" placeholder="for Thursday">
                 </div>
 
                 <div class="form-group col-md-8">
                     <label for="promoFriday">Friday</label>
+                    <div>{{currentFridayDeals}}</div>
                     <input type="promotion" class="form-control" id="promoFriday" placeholder="for Friday">
                 </div>
 
                 <div class="form-group col-md-8">
                     <label for="promoSaturday">Saturday</label>
-                    <input type="promotion" class="form-control" id="promoSaterday" placeholder="for Saturday">
+                    <div>{{currentSaturdayDeals}}</div>
+                    <input type="promotion" class="form-control" id="promoSaturday" placeholder="for Saturday">
                 </div>
 
                 <div class="form-group col-md-8">
                     <label for="promoSunday">Sunday</label>
+                    <div>{{currentSundayDeals}}</div>
                     <input type="promotion" class="form-control" id="promoSunday" placeholder="for Sunday">
                 </div>
-        
+                <input class="btn" id="submit" type="submit" value="Update Deals" />
             </form>
         </div>
         
     </div>
-</div>-->
+</div>
 
-<!-- example of what the business will see when logging in -->
-
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title>Passport with Sequelize</title>
-</head>
- 
-<body>
-    <h2>Dashboard</h2>
-    <h5>Hurray! you are logged in.</h5>
- 
-</body>
- 
-</html> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/setevents.js"></script>
