@@ -1,7 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
   var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+    businessName: DataTypes.STRING,
+    monday: DataTypes.TEXT,
+    tuesday: DataTypes.TEXT,
+    wednesday: DataTypes.TEXT,
+    thursday: DataTypes.TEXT,
+    friday: DataTypes.TEXT,
+    saturday: DataTypes.TEXT,
+    sunday: DataTypes.TEXT,
   });
   return Example;
 };
