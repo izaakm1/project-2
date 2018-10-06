@@ -51,6 +51,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.TEXT
         },
 
+        address: {
+            type: Sequelize.TEXT
+        },
+
         city: {
             type: Sequelize.TEXT
         },
