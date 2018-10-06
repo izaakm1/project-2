@@ -1,0 +1,26 @@
+
+<div class="container">
+  <div class="clear-fix" id="mondaydiv">
+
+        
+         {{#each user}}
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.id}}" aria-expanded="false" aria-controls="{{this.id}}">
+                  ID: {{this.id}} | Name: {{this.firstname}} | Email: {{this.email}}
+                </button>
+              </h5>
+            </div>
+
+            <div id="{{this.id}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+              </div>
+           </div>
+          </div>
+          {{/each}}
+       
+  </div>  
+    
+</div>

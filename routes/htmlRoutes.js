@@ -45,6 +45,15 @@ module.exports = function (app) {
     res.render("contactus")
   })
 
+  app.get("/user", function(req, res) {
+    db.user.findAll({}).then(function(dbusers) {
+      res.render("user", {
+        msg: "Welcome!",
+        user: dbusers
+      });
+    });
+  });
+ 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {
     res.render("404");

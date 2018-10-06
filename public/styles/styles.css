@@ -42,7 +42,7 @@ a img {
 
 
 body {
-  background-color: #b2c2f8;
+  background-color: #acbfff;
   color: #02141d;
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
@@ -135,6 +135,19 @@ header {
     header.smaller nav a {
       line-height: 75px; }
 
+
+#mondaydiv{
+  padding: 3px;
+  
+  background-color:#9fdbfc;
+  
+}
+
+.card {
+  margin:6px;
+  border-radius: 1em;
+  
+}
 /* =Footer
 -------------------------------------------------------------- */
 /* =Extras
