@@ -2,7 +2,7 @@ var exports = module.exports = {}
  
 exports.signup = function(req, res) {
  
-    res.render('signup');
+    res.render('regist');
  
 }
 
@@ -13,7 +13,7 @@ exports.signin = function(req, res) {
 }
 
 exports.setevents = function(req, res) {
- 
+    
     res.render('setevents');
  
 }
