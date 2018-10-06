@@ -63,7 +63,7 @@ module.exports = function (passport, user) {
 
                             business: req.body.business,
                             
-                            address: req.body.business
+                            address: req.body.address,
 
                             city: req.body.city,
 
