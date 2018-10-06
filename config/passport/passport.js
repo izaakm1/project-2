@@ -62,6 +62,8 @@ module.exports = function (passport, user) {
                             lastname: req.body.lastname,
 
                             business: req.body.business,
+                            
+                            address: req.body.business
 
                             city: req.body.city,
 
