@@ -1,45 +1,15 @@
-<!--<div id="login">
-    <div class="container">
-        <div class="col-8 offset-2">
-            <h1>Login to Tappy Hour</h1>
-            <hr/>
-            <form class="clearfix mb-4">
-
-              <div class="form-group">
-                <label for="loginID">Tappy Hour Identification</label>
-                <input type="text" id="loginID" class="form-control"  placeholder="Enter Business Id">
-              </div>
-
-              <div class="form-group">
-                <label for="loginPW">Password</label>
-                <input type="password" class="form-control" id="loginPW"  placeholder="Enter password">
-              </div>
-
-              <button id="submit" class="btn btn-primary float-left">Sign In</button><a class="btn btn-primary float-right" href="/regist">Register</a>
-          </form>
-        </div>
+<div class="container">
+    <div class="col-8 offset-2 jumbotron" id="logindiv">
+            <form id="signin" name="signin" method="post" action="signin" class="clearfix mb-4">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input class="text form-control" name="email" type="text" placeholder="business email"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="form-control" placeholder="your password here"/>
+                </div>
+                <input class="btn btn-primary float-left col-3" type="submit" value="Sign In" />
+            </form>
     </div>
-</div>-->
-
-
-<!-- example signup auth html-->
-
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title></title>
-</head>
- 
-<body>
-    <form id="signin" name="signin" method="post" action="signin">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
-    </form>
- 
-</body>
- 
-</html> 
+</div>
