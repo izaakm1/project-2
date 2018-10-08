@@ -94,7 +94,7 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: #042436;
+  background-color: black;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   -ms-transition: height 0.3s;
@@ -120,7 +120,7 @@ header {
     header nav a {
       line-height: 150px;
       margin-left: 20px;
-      color: #9fdbfc;
+      color: gold;
       font-weight: 700;
       font-size: 18px;
       -webkit-transition: all 0.3s;
