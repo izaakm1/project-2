@@ -42,7 +42,7 @@ a img {
 
 
 body {
-  background-color: #acbfff;
+  background-color: #6b426b;
   color: #02141d;
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
@@ -54,12 +54,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   font-weight: 300; }
 
-a {
-  text-decoration: none;
-  color: #3cb5f9; }
-
-a:hover {
-  color: #0793e2; }
+  a {
+    text-decoration: none;
+    color: #141414; }
+  
+  a:hover {
+    color: #b2e207; }
+  
+  a:hover, a:visited, a:link, a:active
+    {
+        text-decoration: none;
+    }
 
 /* =Template
 -------------------------------------------------------------- */
@@ -148,10 +153,66 @@ header {
   border-radius: 1em;
   
 }
+.btn-link{
+  font-size:22px;
+  font-family: Arial;
+  color: black;
+  text-decoration: none;
+  padding:0px;
+}
+
+.btn-link:hover, .btn-link:visited{
+  text-decoration: none;
+}
+
+.fixedleft{
+  position:fixed;
+  left: 10px;
+  bottom:200px;
+}
+
+.fixedright{
+  position: fixed;
+  right:32px;
+  bottom:200px;
+}
 /* =Footer
 -------------------------------------------------------------- */
 /* =Extras
 -------------------------------------------------------------- */
 
-/* =Media Queries
--------------------------------------------------------------- */
+
+#monday{
+  
+  background-image: linear-gradient(rgb(247, 238, 251), rgb(237, 99, 251));
+  padding:10px 3px;
+
+}
+#tuesday{
+  background-image: linear-gradient(rgb(247, 251, 238), rgb(179, 236, 86));
+  padding: 10px 3px;
+}
+#wednesday{
+  background-image: linear-gradient(white,#0000FF);
+  padding: 10px 3px;
+}
+
+#thursday{
+  background-image: linear-gradient(white,rgb(255, 153, 0));
+  padding: 10px 3px;
+}
+
+#friday{
+  background-image: linear-gradient(white,rgb(255, 0, 0));
+  padding: 10px 3px;
+}
+
+#saturday{
+  background-image: linear-gradient(white,rgb(243, 137, 181));
+  padding: 10px 3px;
+}
+
+#sunday{
+  background-image: linear-gradient(white,rgb(144, 234, 250));
+  padding: 10px 3px;
+}

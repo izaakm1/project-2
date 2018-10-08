@@ -1,30 +1,186 @@
 <div id="home">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-left">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+      <div class="col-2">
+        <img src="/images/TMT-logo.png" alt="TMT Logo" class="sticky-top">
+        <img src="/images/street_logo.png" alt="Street logo">
+        <img src="/images/StoneChurch_logo.png">
+        <img src="/images/BritishBeer_logo.png" alt="British Beer Company logo"  class="fixedleft">
       </div>
+      <div class="col-8">
+        <h1 class="font-effect-wallpaper" style="font-size:65px; font-family:Shojumaru; color:black">Happy Hours Near You</h1>
+        <br>
+
+          <div id="monday" class="clearfix">
+            <h2 class="font-effect-shadow-multiple" style="font-size:40px; font-family:Shojumaru;">Monday </h2>
+            {{#each user}}
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.monday}}" aria-expanded="false" aria-controls="{{this.monday}}" style="text-decoration:none;">
+                       Name: {{this.businessname}} | Event: {{this.monday}}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="{{this.monday}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+                  </div>
+                </div>
+              
+            </div>
+            {{/each}}
+
+          </div>
+
+          <div id="tuesday" class="clearfix">
+            <h2 class="font-effect-shadow-multiple" style="font-size:40px; font-family:Shojumaru;">Tuesday </h2>
+            {{#each user}}
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.tuesday}}" aria-expanded="false" aria-controls="{{this.tuesday}}" style="text-decoration:none;">
+                       Name: {{this.businessname}} | Event: {{this.tuesday}}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="{{this.tuesday}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+                  </div>
+                </div>
+              
+            </div>
+            {{/each}}
+
+          </div>
+
+          <div id="wednesday" class="clearfix">
+            <h2 class="font-effect-shadow-multiple" style="font-size:40px; font-family:Shojumaru;">Wednesday </h2>
+            {{#each user}}
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.wednesday}}" aria-expanded="false" aria-controls="{{this.wednesday}}" style="text-decoration:none;">
+                       Name: {{this.businessname}} | Event: {{this.wednesday}}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="{{this.wednesday}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+                  </div>
+                </div>
+              
+            </div>
+            {{/each}}
+
+          </div>
+
+          <div id="thursday" class="clearfix">
+            <h2 class="font-effect-shadow-multiple" style="font-size:40px; font-family:Shojumaru;">Thursday </h2>
+            {{#each user}}
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.thursday}}" aria-expanded="false" aria-controls="{{this.thursday}}" style="text-decoration:none;">
+                       Name: {{this.businessname}} | Event: {{this.thursday}}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="{{this.thursday}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+                  </div>
+                </div>
+              
+            </div>
+            {{/each}}
+
+          </div>
+
+          <div id="friday" class="clearfix">
+            <h2 class="font-effect-shadow-multiple" style="font-size:40px; font-family:Shojumaru;">Friday </h2>
+            {{#each user}}
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.friday}}" aria-expanded="false" aria-controls="{{this.friday}}" style="text-decoration:none;">
+                       Name: {{this.businessname}} | Event: {{this.friday}}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="{{this.friday}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+                  </div>
+                </div>
+              
+            </div>
+            {{/each}}
+
+          </div>
+
+          <div id="saturday" class="clearfix">
+            <h2 class="font-effect-shadow-multiple" style="font-size:40px; font-family:Shojumaru;">Saturday </h2>
+            {{#each user}}
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.saturday}}" aria-expanded="false" aria-controls="{{this.saturday}}" style="text-decoration:none;">
+                       Name: {{this.businessname}} | Event: {{this.saturday}}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="{{this.saturday}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+                  </div>
+                </div>
+              
+            </div>
+            {{/each}}
+
+          </div>
+
+          <div id="sunday" class="clearfix">
+            <h2 class="font-effect-shadow-multiple" style="font-size:40px; font-family:Shojumaru;">Sunday </h2>
+            {{#each user}}
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#{{this.sunday}}" aria-expanded="false" aria-controls="{{this.sunday}}" style="text-decoration:none;">
+                       Name: {{this.businessname}} | Event: {{this.sunday}}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="{{this.sunday}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    Location: {{this.address}} | {{this.state}} | {{this.city}} | {{this.zip}}
+                  </div>
+                </div>
+              
+            </div>
+            {{/each}}
+
+          </div>
+      </div>
+
+      <div class="col-2">
+        <img src="/images/Row34_logo.png" alt="Row 34 logo" class="sticky-top">
+        <img src="/images/portsmouth-brewery-logo.png" alt="Portsmouth Brewery logo">
+        <img src="/images/FatBellys_logo.png" alt="Fat Belly's logo">
+        <img src="/images/Mojos-Logo.png" alt="Mojos logo"  class="fixedright">
+        
+      </div>
+
     </div>
   </div>
 </div>
