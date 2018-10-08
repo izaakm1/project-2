@@ -7,7 +7,7 @@ module.exports = function (app) {
     db.Example.findAll({}).then(function (results) {
       res.render("index", {
         msg: "Welcome!",
-        examples: results
+        user: results
       });
     });
   });

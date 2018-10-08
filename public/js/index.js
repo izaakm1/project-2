@@ -2,9 +2,13 @@
 $(document).ready(function() {
   $(window).on("scroll", function() {
     if ($(window).scrollTop() >= 20) {
-      $(".navbar").addClass("compressed");
+      $(".logo").attr("style", "height:80px");
+      $(".up").attr("style","height:80px");
+      $(".ahref").attr("style", "line-height:80px")
     } else {
-      $(".navbar").removeClass("compressed");
+      $(".logo").attr("style", "height:150px");
+      $(".ahref").attr("style","line-height:150px");
+      $(".up").attr("style","height:150px")
     }
   });
 });
