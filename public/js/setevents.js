@@ -31,14 +31,15 @@ var API = {
                 "Content-Type": "application/json"
             },
             type: "POST",
-            url: "submitEvents",
+            url: "submitEvents2",
             data: JSON.stringify(deals)
         });
     },
-    getExamples: function () {
+    getExamples: function (deals) {
         return $.ajax({
-            url: "api/examples",
-            type: "GET"
+            url: "updateEventsPage",
+            type: "GET",
+            data: JSON.stringify(deals)
         });
     },
     deleteExample: function (id) {
@@ -85,7 +86,7 @@ var handleFormSubmit = function (event) {
     console.log("button pressed")
 
     var deals = {
-        businessName: $businessName.val().trim(),
+        businessName: $businessName.html(),
         monday: $mon.val().trim(),
         tuesday: $tue.val().trim(),
         wednesday: $wed.val().trim(),
@@ -102,15 +103,8 @@ var handleFormSubmit = function (event) {
     // }
 
     API.saveExample(deals).then(function () {
-        // refreshExamples();
-
-        // $mon.val("")
-        // $tue.val("")
-        // $wed.val("")
-        // $thu.val("")
-        // $fri.val("")
-        // $sat.val("")
-        // $sun.val("")
+        console.log("getting info from db")
+        API.getExamples(deals);
     });
 
 
@@ -130,6 +124,6 @@ var handleDeleteBtnClick = function () {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+// $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 
